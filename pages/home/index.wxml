@@ -12,4 +12,26 @@
       <image class="widgetes-img" src="/image/ahv.png" mode="aspectFit"/>
     </view>
   </view>
+  <!-- 可滚动区域 -->
+  <scroll-view class="conent-scroll" scroll-y="true">
+    <view>
+      <!-- 轮播图 -->
+      <swiper
+        class="swiper"
+        indicator-dots="{{indicatorDots}}"
+        vertical="{{vertical}}"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        circular="{{circular}}"
+        indicator-color="{{indicatorColor}}"
+        indicator-active-color="{{indActiveColor}}"
+        >
+          <block wx:for="{{swipers}}">
+            <swiper-item>
+              <image class="swiper-item" src="{{item.image}}"></image>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+  </scroll-view>
 </view>

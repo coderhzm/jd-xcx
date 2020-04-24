@@ -37,3 +37,21 @@
   width: 40rpx;
   height: 40rpx
 }
+.swiper {
+  width: 100%;
+  height: 325rpx
+}
+
+.conent-scroll {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.swiper-item {
+  width: 100%;
+  height: 100%
+}

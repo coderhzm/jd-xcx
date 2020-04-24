@@ -11,7 +11,14 @@ Page({
     swipers: [],
     logos: [],
     quicks: [],
-    pageRow: []
+    pageRow: [],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    interval: 3000,
+    circular: true,
+    indicatorColor: "rgba(255,255,255,3)",
+    indActiveColor: "#fff"
   },
   /**
    * 生命周期函数--监听页面加载
