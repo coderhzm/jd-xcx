@@ -79,3 +79,63 @@
   width: 100rpx;
   height: 100rpx
 }
+.seckill-top {
+  margin-top: 15rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.seckill-top-left {
+  width: 180rpx;
+  height: 40rpx
+}
+.seckill-top-rigth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15rpx 0 0 25rpx
+}
+.seckill-tright-text {
+  font-size: 22rpx;
+  color: #aaa
+}
+.seckill-tright-icon {
+  width: 22rpx;
+  height: 22rpx;
+}
+.seckill-bottom {
+  width: 100%;
+  margin-top: 10rpx;
+  white-space: nowrap
+}
+.seckill-bot-info {
+  display: inline-block;
+}
+.seckill-binfo {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 20rpx;
+  text-align: center
+}
+.seckill-Binfo-icon {
+  width: 170rpx;
+  height: 170rpx
+}
+.seckill-Binfo-text {
+  font-size:32rpx;
+  color:#FF0000; 
+  margin-top:10rpx;
+}
+.page-row .page_img{
+  max-width: 243rpx;
+  max-height: 292rpx; 
+}
+/* scroll-view 不显示滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

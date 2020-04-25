@@ -33,13 +33,40 @@
           </block>
         </swiper>
     </view>
+    <!-- 推荐 -->
     <view class="logo">
       <block wx:for="{{logos}}">
         <view class="logoinfo">
-          <image class="logo-icon" src="{{item.image}}" />
+          <image class="logo-icon" src="{{item.image}}" mode="aspectFit"/>
           <text class="logo-text">{{item.title}}</text>
         </view>
       </block>
     </view>
+    <!-- 掌上秒杀 -->
+    <view class="seckill">
+      <view class="seckill-top">
+        <image class="seckill-top-left" src="/image/bej.png" mode="aspectFit"></image>
+        <view class="seckill-top-rigth">
+          <text class="seckill-tright-text">更多秒杀</text>
+          <image class="seckill-tright-icon" src="/image/arrowright.png" mode="aspectFit" />
+        </view>
+      </view>
+      <scroll-view class="seckill-bottom" scroll-x="true">
+        <block wx:for="{{quicks}}">
+          <view class="seckill-bot-info">
+            <view class="seckill-binfo">
+              <image class="seckill-Binfo-icon" src="{{item.image}}" />
+              <text class="seckill-Binfo-text">{{item.price}}</text>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
   </scroll-view>
+  <!-- 会场分类 -->
+  <block wx:for='{{pageRow}}' wx:for-item="page">
+    <view class='page-row' style="justify-content:center">
+      <image class='page_img' wx:for='{{page}}' src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </block>
 </view>
