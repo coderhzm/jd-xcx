@@ -1,72 +1,64 @@
-<view class="container">
-  <!-- 搜索 -->
-  <view class="search">
-    <view class="widgetes">
-      <image class="widgetes-img" src="/image/ai3.png" mode="aspectFit"/>
-    </view>
-    <view class="search-input">
-      <image class="search-icon" src="/image/ath.png" mode="aspectFit" />
-      <input class="search-text" placeholder="搜索商品" />
-    </view>
-    <view class="widgetes">
-      <image class="widgetes-img" src="/image/ahv.png" mode="aspectFit"/>
-    </view>
+<view class='container'>
+<!-- 搜索 -->
+  <view class='search'>
+    <view class="scan">
+            <image class="widgets-img" src="/image/ai3.png" mode="aspectFit" bindtap='switchCategory' />
+        </view>
+        <view class="search-input">
+            <image class="search-icon" src="/image/ath.png" mode="aspectFit" />
+            <input class="serach-text" placeholder="搜索商品"  bindinput="bindSearchInput"/>
+        </view>
+        <view class="scan">
+            <image class="widgets-img" src="/image/ahv.png" mode="aspectFit" />
+        </view>
   </view>
-  <!-- 可滚动区域 -->
-  <scroll-view class="conent-scroll" scroll-y="true">
-    <view>
-      <!-- 轮播图 -->
-      <swiper
-        class="swiper"
-        indicator-dots="{{indicatorDots}}"
-        vertical="{{vertical}}"
-        autoplay="{{autoplay}}"
-        interval="{{interval}}"
-        circular="{{circular}}"
-        indicator-color="{{indicatorColor}}"
-        indicator-active-color="{{indActiveColor}}"
-        >
-          <block wx:for="{{swipers}}">
-            <swiper-item>
-              <image class="swiper-item" src="{{item.image}}"></image>
-            </swiper-item>
-          </block>
+  <scroll-view class='content-scroll' scroll-y="true">
+  <!-- 轮播图 -->
+    <view class='indicator-wrap'>
+        <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" 
+        indicator-color="rgba(255, 255, 255, .3)" 
+        indicator-active-color="#fff" style="width:100%;height:325rpx;">
+          <block wx:for-items="{{swipers}}">
+                    <swiper-item>
+                        <image class="swiper-item" src="{{item.image}}" mode="aspectFill"/>
+                    </swiper-item>
+                </block>
         </swiper>
     </view>
-    <!-- 推荐 -->
-    <view class="logo">
-      <block wx:for="{{logos}}">
-        <view class="logoinfo">
-          <image class="logo-icon" src="{{item.image}}" mode="aspectFit"/>
-          <text class="logo-text">{{item.title}}</text>
-        </view>
-      </block>
+    <!-- 图标分类 -->
+    <view class="big-logo">
+        <block wx:for="{{logos}}">
+            <view class="logoinfo">
+                <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit"/>
+                <text class="logotext">{{item.title}}</text>
+            </view>
+        </block>
     </view>
     <!-- 掌上秒杀 -->
-    <view class="seckill">
-      <view class="seckill-top">
-        <image class="seckill-top-left" src="/image/bej.png" mode="aspectFit"></image>
-        <view class="seckill-top-rigth">
-          <text class="seckill-tright-text">更多秒杀</text>
-          <image class="seckill-tright-icon" src="/image/arrowright.png" mode="aspectFit" />
+    <view class='page-margin'>
+      <view class="page-row">
+        <image class='theme_img' src="/image/bej.png" mode="aspectFill" />
+        <view class='theme_more'>
+            <text>更多秒杀</text>
+            <image src="/image/arrowright.png" mode="aspectFill" />
         </view>
       </view>
-      <scroll-view class="seckill-bottom" scroll-x="true">
-        <block wx:for="{{quicks}}">
-          <view class="seckill-bot-info">
-            <view class="seckill-binfo">
-              <image class="seckill-Binfo-icon" src="{{item.image}}" />
-              <text class="seckill-Binfo-text">{{item.price}}</text>
+      <scroll-view class='theme_scroll' scroll-x="true">
+        <block wx:for-items="{{quicks}}">
+            <view style="display: inline-block;">
+                <view class="page-column">
+                    <image src="{{item.image}}" mode="aspectFill"/>
+                    <text>{{item.price}}</text>
+                </view>
             </view>
-          </view>
         </block>
       </scroll-view>
     </view>
+    <!-- 会场分类 -->
+    <block wx:for='{{pageRow}}' wx:for-item="page">
+      <view class='page-row' style="justify-content:center">
+        <image class='page_img' wx:for='{{page}}' src="{{item}}" mode="aspectFill"></image>
+      </view>
+    </block>
   </scroll-view>
-  <!-- 会场分类 -->
-  <block wx:for='{{pageRow}}' wx:for-item="page">
-    <view class='page-row' style="justify-content:center">
-      <image class='page_img' wx:for='{{page}}' src="{{item}}" mode="aspectFill"></image>
-    </view>
-  </block>
 </view>
