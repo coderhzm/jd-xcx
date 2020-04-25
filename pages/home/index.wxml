@@ -33,5 +33,13 @@
           </block>
         </swiper>
     </view>
+    <view class="logo">
+      <block wx:for="{{logos}}">
+        <view class="logoinfo">
+          <image class="logo-icon" src="{{item.image}}" />
+          <text class="logo-text">{{item.title}}</text>
+        </view>
+      </block>
+    </view>
   </scroll-view>
 </view>
