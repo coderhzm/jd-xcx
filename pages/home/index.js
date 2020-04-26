@@ -34,7 +34,7 @@ Page({
         "content-type": "application/json"//默认值，返回的数据设为json格式
       },
       success(res) {
-        console.log(res.data);
+        // console.log(res.data);
         self.setData({
           swipers: res.data.swipers,
           logos: res.data.logos,
