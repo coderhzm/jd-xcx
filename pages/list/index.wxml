@@ -1,7 +1,7 @@
 <!--pages/list/index.wxml-->
 <view class="prolist">
-  <block wx:for='{{proList}}'>
-    <view class="prolist-item">
+  <block wx:for='{{proList}}' wx:key="{{index}}">
+    <view class="prolist-item" bindtap="switchProlistDetail" data-index="{{index}}">
       <view class="prolist-cover">
         <image src="{{item.cover}}"></image>
       </view>

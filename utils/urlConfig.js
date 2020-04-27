@@ -6,7 +6,9 @@ const inerface = {
   // 返回的商品的json数据
   productions: domain + '/api/profiles/productions',
   //商品列表接口地址
-  productionsList: domain + '/api/profiles/productionsList'
+  productionsList: domain + '/api/profiles/productionsList',
+  //商品详情接口地址
+  productionDetail: domain + '/api/profiles/productionDetail'
 }
 
 module.exports = inerface;

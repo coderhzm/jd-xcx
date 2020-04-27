@@ -29,7 +29,6 @@ Page({
         "content-type": "application/json"
       },
       success(res) {
-        console.log(res.data)
         self.setData({
           proList: res.data
         })
@@ -90,6 +89,13 @@ Page({
         // 隐藏加载状态
         wx.hideNavigationBarLoading()
       }
+    })
+  },
+  switchProlistDetail(e) {
+
+    let index = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '/pages/detail/index?id=' + this.data.proList[index].id,
     })
   }
 })

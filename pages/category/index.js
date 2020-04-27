@@ -12,7 +12,7 @@ Page({
     curIndex: 0
   },
 
-  onLoad: function (options) {
+  onLoad(options) {
     const self = this
     wx.request({
       url: inerface.productions,
@@ -20,7 +20,6 @@ Page({
         "content-type": "application/json"
       },
       success(res) {
-        console.log(res.data)
         self.setData({
           navLeftItems: res.data.navLeftItems,
           navRightItems: res.data.navRightItems

@@ -44,7 +44,7 @@
         </view>
       </view>
       <scroll-view class='theme_scroll' scroll-x="true">
-        <block wx:for-items="{{quicks}}">
+        <block wx:for-items="{{quicks}}" wx:key="{{index}}">
             <view style="display: inline-block;">
                 <view class="page-column">
                     <image src="{{item.image}}" mode="aspectFill"/>
@@ -55,7 +55,7 @@
       </scroll-view>
     </view>
     <!-- 会场分类 -->
-    <block wx:for='{{pageRow}}' wx:for-item="page">
+    <block wx:for='{{pageRow}}' wx:for-item="page" wx:key="{{index}}">
       <view class='page-row' style="justify-content:center">
         <image class='page_img' wx:for='{{page}}' src="{{item}}" mode="aspectFill"></image>
       </view>

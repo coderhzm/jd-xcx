@@ -1,2 +1,27 @@
 <!--pages/detail/index.wxml-->
-<text>pages/detail/index.wxml</text>
+<view class="detail">
+<!-- 轮播部分 -->
+  <view class="mod-slider">
+    <swiper
+    indicator-dots="true"
+    indicator-color="rgba(255,255,255,.6)"
+    indicator-active-color="#e93b3d"
+    style="width: 100%; height:820rpx;"
+    >
+    <block wx:for="{{partData.loopImgUrl}}" wx:key="{{index}}">
+      <swiper-item>
+        <image class="swiper-itemImg" src="{{item}}" />
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+  <!-- 商品信息 -->
+  <view class="buy-area">
+    <view class="textWrap">
+      <text>{{partData.title}}</text>
+    </view>
+    <view class="priceWrap">
+      <text>￥{{partData.price}}</text>
+    </view>
+  </view>
+</view>
