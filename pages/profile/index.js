@@ -12,7 +12,7 @@ Page({
     canIUse: wx.canIUse("button.open-type.getUserInfo")
   },
   //实现获取用户信息的方法
-  getUserInfo: function(e) {
+  getUserInfo(e) {
     // console.log(e)
     this.setData({
       userInfo: e.detail.userInfo,
@@ -22,7 +22,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad(options) {
     if(app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

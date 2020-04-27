@@ -21,3 +21,9 @@
 .usermotto {
   margin-top: 200px;
 }
+/* scroll-view 不显示滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

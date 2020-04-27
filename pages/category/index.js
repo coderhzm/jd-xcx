@@ -34,5 +34,12 @@ Page({
     this.setData({
       curIndex: index
     })
+  },
+  showListView(e) {
+    let txt = e.currentTarget.dataset.txt;
+    //导航跳转方法
+    wx.navigateTo({
+      url: '/pages/list/index?title='+txt,
+    })
   }
 })
