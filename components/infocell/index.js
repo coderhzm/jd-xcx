@@ -4,7 +4,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    title: {
+      type: String,
+      value: ''
+    },
+    desc: {
+      type: String,
+      value: ''
+    }
   },
 
   /**
@@ -18,6 +25,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    popView() {
+      //注册事件
+      this.triggerEvent("popView")
+    }
   }
 })

@@ -24,4 +24,16 @@
       <text>￥{{partData.price}}</text>
     </view>
   </view>
+  <!-- 白条支付 -->
+  <infocell
+    title="支付"
+    desc="{{baitiaoSelectItem.desc}}"
+    bind:popView="popBaitiaoView"
+    ></infocell>
+  <!-- 已选 -->
+  <infocell
+    title="已选"
+    desc="{{partData.count}}件"
+    bind:popView="popBuyView"
+    ></infocell>
 </view>
