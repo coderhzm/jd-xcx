@@ -12,8 +12,8 @@ Page({
     baitiaoSelectItem: {
       desc: "【白条支付】首单享立减优惠"
     },
-    hideBaitiao: true
-
+    hideBaitiao: true,
+    hideBuy: true
   },
 
   /**
@@ -56,7 +56,9 @@ Page({
   },
   //件数
   popBuyView() {
-    console.log("显示已选")
+    this.setData({
+      hideBuy: false
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
