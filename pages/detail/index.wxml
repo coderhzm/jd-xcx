@@ -36,4 +36,7 @@
     desc="{{partData.count}}件"
     bind:popView="popBuyView"
     ></infocell>
+
+  <!-- 白条弹框 -->
+  <IOU baitiao='{{baitiao}}' hideBaitiao='{{hideBaitiao}}' bind:updateSelect='updateSelectItem'></IOU>
 </view>

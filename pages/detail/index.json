@@ -1,5 +1,7 @@
 {
+  "navigationBarTitleText": "京东",
   "usingComponents": {
-    "infocell": "/components/infocell/index"
+    "infocell": "/components/infocell/index",
+    "IOU": "/components/IOU/index"
   }
 }
