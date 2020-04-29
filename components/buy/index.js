@@ -29,6 +29,10 @@ Component({
           hideBuy: true
         })
       }
+    },
+    getCount(e) {
+      // console.log(e)
+      this.triggerEvent("onGetCount", e.detail)
     }
   }
 })

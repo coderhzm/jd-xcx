@@ -60,6 +60,14 @@ Page({
       hideBuy: false
     })
   },
+
+  upDataCount(e) {
+    let partDate = this.data.partData;
+    partDate.count = e.detail.val;
+    this.setData({
+      partData: partDate 
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

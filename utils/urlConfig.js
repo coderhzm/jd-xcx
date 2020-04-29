@@ -1,4 +1,4 @@
-const domain = "https://enigmatic-island-47099.herokuapp.com";
+const domain = "https://msinterface-jd.herokuapp.com";
 
 const inerface = {
   //首页网络请求

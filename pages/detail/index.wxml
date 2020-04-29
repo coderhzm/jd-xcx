@@ -40,5 +40,5 @@
   <!-- 白条弹框 -->
   <IOU baitiao='{{baitiao}}' hideBaitiao='{{hideBaitiao}}' bind:updateSelect='updateSelectItem'></IOU>
   <!-- 商品件数 -->
-  <buy hideBuy="{{hideBuy}}" partData="{{partData}}"></buy>
+  <buy hideBuy="{{hideBuy}}" partData="{{partData}}" bind:onGetCount="upDataCount"></buy>
 </view>
