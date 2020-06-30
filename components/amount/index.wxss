@@ -6,18 +6,20 @@
   flex-direction: row;
 }
 .num_wrap .btn{
-  width: 70rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60rpx;
   height: 60rpx;
-  line-height: 60rpx;
   background: #f7f7f7;
   text-align: center;
-  border-radius: 0;
+  border-radius: 3rpx;
   color: #333;
 }
 .btn::after{
   border: none;
 }
-.num_wrap input{
+.numberInput{
   width: 90rpx;
   background: #f7f7f7;
   height: 60rpx;
@@ -25,5 +27,5 @@
   font-size: 24rpx;
   text-align: center;
   border: none;
-  margin: 0 2rpx;
+  margin: 0 5rpx;
 }
